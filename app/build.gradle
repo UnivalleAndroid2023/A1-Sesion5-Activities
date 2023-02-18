@@ -7,6 +7,10 @@ android {
     namespace 'com.gonzalezblanchard.sesion5'
     compileSdk 33
 
+    buildFeatures{
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId "com.gonzalezblanchard.sesion5"
         minSdk 26
