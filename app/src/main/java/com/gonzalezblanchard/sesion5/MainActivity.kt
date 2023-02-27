@@ -12,22 +12,14 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater).apply {
-            setContentView(root)
-            button.text = "Cambiar pantalla"
-        }
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        binding.button.text = "Cambiar pantalla"
     }
 
     fun cambiarPantalla(view: View){
-
         val intent = Intent(this, DetailActivity::class.java);
         startActivity(intent)
-
-
-        /*val intent = Intent(this, CreateTicketActivity::class.java).apply {
-            //putExtra(EXTRA_MESSAGE, message)
-        }*/
-
     }
 
 }
